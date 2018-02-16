@@ -214,7 +214,22 @@ pprint(rows)
      (u'carribean,_roti', 1),
      (u'diner', 1),
      (u'filipino', 1)]
+     
     
+### 4. Other ideas about the Dataset and additional Improvements.
+
+The first step in data analysis is to improve data quality. Data scientists correct spelling mistakes, handle missing data and weed out nonsense information. This is the most critical step in the data value chain, junk data will generate wrong results and mislead. It is especially important that this step will scale, since having continuous data value chain requires that incoming data will get cleaned immediately and at very high rates.
+
+Here, in the project we downloaded the metro extract from MapZen. Users have created scripts to import massive amounts of data from other sources, sometimes this can introduce additional issues such as incorrect values or superfluous information.
+
+Street name abbreviation and postcode values could be crosschecked when inputing a new address. Most countries have public APIs to retrieve addresses from postcodes, so it could be done, with the help of contributors around the world. This improvement could prevent a lot of wrong data inputs. It would definitely cause a positive impact which would affect users througout the world. On the other hand, a change like this decreases the freedom of the user when inputing new addresses. Since data could only be submitted if it was in accordance with the crosschecked value from another data source. These positive and negative impacts should be weighted before implementing this kind of improvement to the process.
+
+The Open Street Map input tool could have a phone format validator, varying from country to country, to avoid such a mess on the phones format. It could also separate multiple phones with a standard separator. It was one of the most difficult steps of the phone values wrangling. The fact that each country has a different standard format makes it difficult to implement this, but with the help of the open software community around Open Street Map it could be done. It would decrease the freedom of the user inputing the data, since the phone format would have to be validated to the standards. And every time the standards change, the validators would have to be updated.
+
+Also we can make some rules or patterns to input data which users follow everytime to input their data. This will also restrict users input in their native language and use unnecessary inputs.
+
+We can also use third party tools such as Mapbox and Google Maps API to improve the dataset. Mapbox provides a suite of digital mapping tools that allow custom maps to be quickly and easily added to applications. The Mapbox platform is open source and features textures, illustrations, custom markers, vector tiles, static maps, geocoding and more. Any GIS system is only as good as the data that's in it. ArcGIS provides a complete set of tools that give you the flexibility to store, edit, and manage data in a way that fits with your existing processes. 
+
 ### 4. Conclusion
 
  Data wrangling is the process of transforming and mapping data from one "raw" data form into another format with the intent of making it more appropriate and valuable for a variety of downstream purposes such as analytics. In our data auditing we used only 3 regular expressions to check for certain patterns in the tags. It is a huge data set and it may have some irregular patterns also. It will take time to find and complete the task in time. 
